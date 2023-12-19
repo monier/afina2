@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B22AFA68-F3DE-44AD-8A5B-20B67A5A6F8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{1F69AC21-A0C9-4172-A9C6-3E5BC8CBB78E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{0491064B-9111-4F81-9601-BC9FE131098B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afina2.Server.WebApp", "src\apps\server\Afina2.Server.WebApp\Afina2.Server.WebApp.csproj", "{34B3F3AA-C54C-4D39-820E-05BB09F648E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afina2.Server.WebApp.Tests", "src\apps\server\Afina2.Server.WebApp.Tests\Afina2.Server.WebApp.Tests.csproj", "{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B3F3AA-C54C-4D39-820E-05BB09F648E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B3F3AA-C54C-4D39-820E-05BB09F648E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B3F3AA-C54C-4D39-820E-05BB09F648E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B3F3AA-C54C-4D39-820E-05BB09F648E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F69AC21-A0C9-4172-A9C6-3E5BC8CBB78E} = {B22AFA68-F3DE-44AD-8A5B-20B67A5A6F8B}
+		{0491064B-9111-4F81-9601-BC9FE131098B} = {1F69AC21-A0C9-4172-A9C6-3E5BC8CBB78E}
+		{34B3F3AA-C54C-4D39-820E-05BB09F648E2} = {0491064B-9111-4F81-9601-BC9FE131098B}
+		{BD13DA6B-E4A6-46A6-8056-3920DD3A73E3} = {0491064B-9111-4F81-9601-BC9FE131098B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70D1AC60-0752-4405-B02D-109938A06EC4}
+	EndGlobalSection
+EndGlobal
