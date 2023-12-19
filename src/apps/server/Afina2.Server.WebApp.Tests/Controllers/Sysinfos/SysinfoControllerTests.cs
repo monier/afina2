@@ -1,5 +1,4 @@
 using Afina2.Server.WebApp.Controllers.Sysinfos;
-using Xunit;
 using System.Net;
 using System.Net.Http.Json;
 
@@ -12,16 +11,16 @@ public class SysinfoControllerTests : ControllerTestsBase
     {
         var response = await _client.GetAsync("/api/sysinfo/ping");
 
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.True(HttpStatusCode.OK == response.StatusCode, $"Expected status code {HttpStatusCode.OK} but got {response.StatusCode}");
     }
 
     [Fact]
     public async void GetAllEndpoints_EnumeratesAllExistingEndpoints()
     {
-        var response = await _client.GetFromJsonAsync<Endpoint[]>("/api/sysinfo/endpoints");
+        var response = await _client.GetFromJsonAsync<GetEndpointsResponse>("/api/sysinfo/endpoints");
 
-        Assert.NotNull(response);
-        Assert.True(response?.Length > 0, "The endpoint list is empty");
-        Assert.True(response?.FirstOrDefault(e => e.Route?.ToLower() == "/api/sysinfo/ping") != null, "Sysinfo/Ping endpoint is not found");
+        Assert.NotNull(response?.Items);
+        Assert.True(response?.Items?.Count() > 0, "The endpoint list is empty");
+        Assert.True(response?.Items?.FirstOrDefault(e => e.Route?.ToLower() == "/api/sysinfo/ping") != null, "Sysinfo/Ping endpoint is not found");
     }
 }

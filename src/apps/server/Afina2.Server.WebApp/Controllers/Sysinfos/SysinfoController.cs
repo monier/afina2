@@ -34,7 +34,7 @@ public class SysinfoController : ApiControllerBase
     /// </summary>
     /// <returns>A list of all endpoints in the application.</returns>
     [HttpGet("endpoints")]
-    public ActionResult GetAllEndpoints()
+    public ActionResult GetEndpoints()
     {
         // following code is retrieved from https://stackoverflow.com/questions/28435734/how-to-get-a-list-of-all-routes-in-asp-net-core
         var endpoints = _endpointSources
@@ -62,6 +62,9 @@ public class SysinfoController : ApiControllerBase
             }
         );
 
-        return Ok(output);
+        return Ok(new GetEndpointsResponse
+        {
+            Items = output
+        });
     }
 }
